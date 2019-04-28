@@ -1,0 +1,8 @@
+<div class="container">
+  <mat-radio-group [(ngModel)]="selectDevice" class="bluetooth__list">
+    <mat-radio-button [value]="season" class="bluetooth__list--item" *ngFor="let device of bluetoothDevice">
+      {{device}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <button mat-raised-button>Connect</button>
+</div>

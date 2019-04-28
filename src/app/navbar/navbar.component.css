@@ -1,0 +1,20 @@
+.navbar__container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 151, 118);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navbar__title {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar__return {
+    position: absolute;
+    left: 10px;
+    align-self: center;
+}

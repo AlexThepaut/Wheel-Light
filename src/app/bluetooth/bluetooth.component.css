@@ -1,0 +1,10 @@
+.bluetooth__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.bluetooth__list--item {
+    margin: 5px 0;
+}
