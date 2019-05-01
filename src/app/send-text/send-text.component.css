@@ -1,0 +1,12 @@
+.send__text {
+    width: 100%;
+}
+
+.send__text-preview {
+    background-color: black;
+    width: 100%;
+    height: 90px;
+    margin: 18px 0;
+    padding: 5px;
+    border-radius: 5px;
+}

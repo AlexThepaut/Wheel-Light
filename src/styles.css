@@ -2,6 +2,7 @@
 
 html, body {
     height: 100%;
+    color: white;
 }
 
 body {
@@ -20,4 +21,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.page__button {
+    width: 60%;
+    max-width: 250px;
 }
