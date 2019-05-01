@@ -1,6 +1,6 @@
 <div class="container">
   <mat-form-field class="send__text">
-    <textarea matInput placeholder="Message a envoyer" (keyup)="textWriting($event)"></textarea>
+    <textarea matInput placeholder="Message a envoyer" (keyup)="textWriting($event)" [value]="textToSend"></textarea>
   </mat-form-field>
   
   <!-- <button mat-raised-button (click)="handlePreview()" class="page__button">Preview</button> -->

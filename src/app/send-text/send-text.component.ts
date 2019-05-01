@@ -29,7 +29,13 @@ export class SendTextComponent implements OnInit {
   }
 
   textWriting(event) {
-    this.textToSend = event.target.value;
+    let temp = event.target.value;
+    if(this.textToSend.lastIndexOf('*/*') != -1) {
+      this.textToSend = temp.slice(0, this.textToSend.indexOf('*/*')+1) + `[r, g, b] text` + temp.slice(this.textToSend.indexOf('*/*')+1, this.textToSend.length)
+    }else {
+      this.textToSend = temp;
+    }
+    console.log(this.textToSend);
     this.setPreview();
   }
 }
