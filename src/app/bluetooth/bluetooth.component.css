@@ -8,3 +8,8 @@
 .bluetooth__list--item {
     margin: 5px 0;
 }
+
+.bluetooth__button {
+    width: 60%;
+    max-width: 250px;
+}

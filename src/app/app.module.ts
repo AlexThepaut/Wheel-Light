@@ -10,7 +10,7 @@ import { SendTextComponent } from './send-text/send-text.component';
 import { WheelSpeedComponent } from './wheel-speed/wheel-speed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSlideToggleModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule} from '@angular/material';
+import {MatSlideToggleModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatSelectModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 @NgModule({
@@ -29,10 +29,10 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
     MatSlideToggleModule,
     MatIconModule,
     MatButtonModule,
-    MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
   ],
   providers: [
     FormBuilder,

@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BluetoothComponent implements OnInit {
 
+  selected: number;
   selectDevice: string;
-  bluetoothDevice = ['appareil 1', 'appareil 2', 'appareil 3'];
+  bluetoothDevice = [{'id': 1, 'name': 'appareil 1'}, {'id': 2, 'name': 'appareil 2'}, {'id': 3, 'name': 'appareil 3'}];
 
   constructor() { }
 
   ngOnInit() {  
   }
 
+  handleConnect() {
+    console.log(this.selected);
+  }
 }

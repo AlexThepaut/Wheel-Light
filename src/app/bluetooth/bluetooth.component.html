@@ -1,9 +1,12 @@
 <div class="container">
-  <mat-radio-group [(ngModel)]="selectDevice" class="bluetooth__list">
-    <mat-radio-button [value]="season" class="bluetooth__list--item" *ngFor="let device of bluetoothDevice">
-      {{device}}
-    </mat-radio-button>
-  </mat-radio-group>
-  
-  <button mat-raised-button>Connect</button>
+  <mat-form-field>
+    <mat-label>Bluetooth device</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option *ngFor="let device of bluetoothDevice" [value]="device.id">
+        {{device.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="handleConnect()" class="bluetooth__button">Connect</button>
 </div>
