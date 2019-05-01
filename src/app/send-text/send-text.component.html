@@ -3,7 +3,7 @@
     <textarea matInput placeholder="Message a envoyer" (keyup)="textWriting($event)"></textarea>
   </mat-form-field>
   
-  <button mat-raised-button (click)="handlePreview()" class="page__button">Preview</button>
+  <!-- <button mat-raised-button (click)="handlePreview()" class="page__button">Preview</button> -->
 
   <div class="text-preview" class="send__text-preview">
     <span *ngFor="let part of textPreview" [ngStyle]="{'color': part.color}">{{part.text}}</span>

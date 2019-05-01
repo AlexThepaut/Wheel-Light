@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TextPreview } from '../model/text-preview.model';
-import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-send-text',
@@ -18,7 +17,7 @@ export class SendTextComponent implements OnInit {
   ngOnInit() {
   }
 
-  handlePreview() {
+  setPreview() {
     this.textPreview = []
     let partSplit = this.textToSend.split("*");
     partSplit.forEach((p) => {
@@ -31,5 +30,6 @@ export class SendTextComponent implements OnInit {
 
   textWriting(event) {
     this.textToSend = event.target.value;
+    this.setPreview();
   }
 }
