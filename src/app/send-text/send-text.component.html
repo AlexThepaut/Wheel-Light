@@ -1,11 +1,8 @@
 <div class="container">
   <mat-form-field class="send__text">
-    <input matInput placeholder="Couleur par défaut" [value]="defaultColor" (keyup)="colorChange($event)">
-  </mat-form-field>
-  <mat-form-field class="send__text">
     <textarea matInput placeholder="Message a envoyer" (keyup)="textWriting($event)" [value]="textToSend"></textarea>
   </mat-form-field>
-  Écrire */* : pour un texte coloré
+  Écrire */* : pour insérer un texte coloré
 
   <!-- <button mat-raised-button (click)="handlePreview()" class="page__button">Preview</button> -->
 
