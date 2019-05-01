@@ -8,3 +8,9 @@
 .bluetooth__list--item {
     margin: 5px 0;
 }
+
+.dialog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

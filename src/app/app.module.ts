@@ -5,12 +5,20 @@ import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { BluetoothComponent } from './bluetooth/bluetooth.component';
+import { BluetoothComponent, BluetoothErrorDialog } from './bluetooth/bluetooth.component';
 import { SendTextComponent } from './send-text/send-text.component';
 import { WheelSpeedComponent } from './wheel-speed/wheel-speed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSlideToggleModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {
+  MatSlideToggleModule, 
+  MatIconModule, 
+  MatButtonModule, 
+  MatInputModule, 
+  MatSelectModule, 
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS
+} from '@angular/material';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 @NgModule({
@@ -20,7 +28,8 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
     BluetoothComponent,
     SendTextComponent,
     WheelSpeedComponent,
-    NavbarComponent
+    NavbarComponent,
+    BluetoothErrorDialog
   ],
   imports: [
     BrowserModule,
@@ -33,9 +42,14 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    BluetoothComponent,
+    BluetoothErrorDialog
   ],
   providers: [
-    FormBuilder,
+    FormBuilder
   ],
   bootstrap: [AppComponent]
 })
