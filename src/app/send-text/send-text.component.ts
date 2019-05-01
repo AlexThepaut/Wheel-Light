@@ -10,7 +10,7 @@ export class SendTextComponent implements OnInit {
 
   textToSend = '';
   textPreview: TextPreview[];
-  defaultColor = 'rgb(255, 0, 0)';
+  defaultColor = 'Red';
 
   constructor() { }
 
@@ -18,11 +18,11 @@ export class SendTextComponent implements OnInit {
   }
 
   setPreview() {
-    this.textPreview = []
+    this.textPreview = [];
     let partSplit = this.textToSend.split('*');
     partSplit.forEach((p) => {
       let colorSplit = p.split(']');
-      let color = (colorSplit.length > 1) ? `rgb(${colorSplit[0].substr(1)})` : this.defaultColor;
+      let color = (colorSplit.length > 1) ? `rgb(${colorSplit[0].substr(1)})` : this.defaultColor.toLowerCase();
       let text = (colorSplit.length > 1) ? colorSplit[1].slice(0, -1) : colorSplit[0];
       this.textPreview = [... this.textPreview, new TextPreview(text, color)];
     });
@@ -35,7 +35,10 @@ export class SendTextComponent implements OnInit {
     }else {
       this.textToSend = temp;
     }
-    console.log(this.textToSend);
     this.setPreview();
+  }
+
+  colorChange(event) {
+    this.defaultColor = event.target.value;
   }
 }
